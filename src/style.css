@@ -2,25 +2,11 @@
   --blue: #00acdc;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+  margin: 0;
 }
 
 /* My css */
@@ -41,26 +27,34 @@ a {
 .nav-list {
   display: flex;
   align-items: center;
+
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list__item {
   text-transform: uppercase;
+  list-style: none;
 }
 
 .nav-list__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav-list__item:hover {
-  color: var(--blue);
-}
-
 .nav-list__link {
   display: flex;
-
   justify-content: center;
   align-items: center;
+
   height: 60px;
+
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-list__link:hover {
+  color: var(--blue);
 }
 
 .nav-list__link.is-active {
