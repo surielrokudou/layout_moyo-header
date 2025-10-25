@@ -1,3 +1,80 @@
-body {
+:root {
+  --blue: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* My css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list__item {
+  text-transform: uppercase;
+}
+
+.nav-list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-list__item:hover {
+  color: var(--blue);
+}
+
+.nav-list__link {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-list__link.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.nav-list__link.is-active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  background-color: var(--blue);
 }
